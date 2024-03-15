@@ -1,5 +1,7 @@
 package home.projects.cricket.score.controller;
 
+import home.projects.cricket.score.dto.ScoreDTO;
+import home.projects.cricket.score.service.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
