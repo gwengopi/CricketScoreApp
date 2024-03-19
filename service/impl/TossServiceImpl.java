@@ -1,5 +1,6 @@
 package home.projects.cricket.score.service.impl;
 
+import home.projects.cricket.score.dto.TossDTO;
 import home.projects.cricket.score.entity.Toss;
 import home.projects.cricket.score.repo.TossRepository;
 import home.projects.cricket.score.service.TossService;
@@ -16,7 +17,7 @@ public class TossServiceImpl implements TossService {
     public String getTossWinner(String matchId) {
         Toss toss = tossRepository.findByMatchId(matchId);
         if (toss != null) {
-            return toss.getWinner();
+            return toss.getTossWinner();
         }
         return null;
     }
@@ -28,6 +29,15 @@ public class TossServiceImpl implements TossService {
             return toss.getDecision();
         }
         return null;
+    }
+
+    @Override
+    public void saveTossDetails(TossDTO tossDetails) {
+        Toss toss = new Toss();
+        toss.setMatchId(tossDetails.getMatchId());
+        toss.setDecision(tossDetails.getDecision());
+        toss.setTossWinner(tossDetails.getWinner());
+        tossRepository.save(toss);
     }
 }
 
