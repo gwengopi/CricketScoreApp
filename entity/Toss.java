@@ -15,7 +15,7 @@ public class Toss {
     @Id
     private String id;
     private String matchId;
-    private String winner;
+    private String tossWinner;
     private String decision;
 
     // Getters and setters
