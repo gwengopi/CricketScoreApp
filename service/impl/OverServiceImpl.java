@@ -1,7 +1,7 @@
 package home.projects.cricket.score.service.impl;
 
 import home.projects.cricket.score.dto.OverDTO;
-import home.projects.cricket.score.dto.OverRepository;
+import home.projects.cricket.score.repo.OverRepository;
 import home.projects.cricket.score.entity.Over;
 import home.projects.cricket.score.service.OverService;
 import home.projects.cricket.score.service.TossService;
